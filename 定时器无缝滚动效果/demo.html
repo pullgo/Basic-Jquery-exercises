@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<style type="text/css">
+*{margin:0px;padding:0px;} 
+#box{
+	width: 1235px;
+	height: 358px;
+	overflow: hidden;
+	margin:50px auto;
+}
+.pic{
+	width: 7410px;
+	height: 358px;
+	float: left;
+	position:relative;
+}
+.pic img{
+	float: left;
+}
+</style>
+</head>
+<body>
+<div id="box">
+    <div class="pic">
+        <img src="./images/1.jpg">
+        <img src="./images/2.jpg">
+        <img src="./images/3.jpg">
+        <img src="./images/4.jpg">
+        <img src="./images/5.jpg">
+        <img src="./images/6.jpg">
+    </div>
+ </div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+var i = 0;
+var s = 1;
+function junmper(){
+	s = -1235+i*-1235;
+	$("#box .pic").animate({left:s+'px'},500);
+	i++;
+	if(i==5)
+	i=-1;
+}
+setInterval("junmper()",1000);
+/*总结：
+1.s的初始值为1
+2.s的赋值需要注意
+3.最后i=-1
+*/
+</script>
+</body>
+</html>

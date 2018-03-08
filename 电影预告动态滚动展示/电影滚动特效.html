@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<style type="text/css">
+*{margin:0px;padding:0px;}
+body{
+	overflow: hidden;
+}
+#box{
+	width:100%;
+	height:211px;
+	background:url(./images/bg1.jpg);
+	margin:80px auto;
+	padding-top: 35px;
+}
+.pic{
+	width:100%;
+	height:175px;
+  position:relative;
+}
+.pic ul{
+	width: 5000px;
+}
+.pic ul li{
+	width:254px;
+	height:175px;
+	border:1px solid #000;
+	float: left;
+	list-style: none;
+	text-align: center;
+  position: relative;
+}
+.pic ul li img{
+	width:254px;
+	height:175px;
+}
+.pic ul li .bigimg{
+	width:380px;
+	height:350px;
+	display:none;
+  position: absolute;
+  z-index: 10;
+}
+</style>
+</head>
+<body>
+<div id="box">
+  <div class="pic">
+     <ul>
+        <li>
+          <img src="./images/1.jpg"/>
+          <div class="bigimg">
+             <img class="img"style="width:380px;height:350px;" src="./images/1.jpg"/>
+          </div>
+        </li>
+         <li>
+          <img src="./images/2.jpg"/>
+          <div class="bigimg">
+             <img style="width:380px;height:350px;" src="./images/2.jpg"/>
+          </div>
+        </li>
+        <li>
+          <img src="./images/3.jpg"/>
+          <div class="bigimg">
+             <img style="width:380px;height:350px;" src="./images/3.jpg"/>
+          </div>
+        </li>
+        <li>
+          <img src="./images/4.jpg"/>
+          <div class="bigimg">
+             <img style="width:380px;height:350px;" src="./images/4.jpg"/>
+          </div>
+        </li>
+        <li>
+          <img src="./images/5.jpg"/>
+          <div class="bigimg">
+             <img style="width:380px;height:350px;" src="./images/5.jpg"/>
+          </div>
+        </li>
+        <li>
+          <img src="./images/6.jpg"/>
+          <div class="bigimg">
+             <img style="width:380px;height:350px;"  src="./images/6.jpg"/>
+          </div>
+        </li>
+     </ul>
+  </div>
+</div>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" >
+  var i = 0;
+  var time = 0;
+  $(".pic ul li").hover(function(){
+    clearInterval (time);
+    $(this).children(".bigimg").show();
+  },function(){
+    $(this).children(".bigimg").hide();
+    time=setInterval("junmper()",10);
+  });
+
+$(".pic ul li").mousemove(function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  var li_x = $(this).offset().left;
+  var li_y = $(this).offset().top;
+  var yd_x = x-li_x;
+  var yd_y = y-li_y;
+  $(this).children(".bigimg").css({left:yd_x,top:yd_y});
+});
+
+function junmper(){
+  i--;
+  $(".pic").css("left",i+'px');
+  if (i==-window.innerWidth)
+  i=0;
+}
+
+time=setInterval("junmper()",10);
+</script>
+</body>
+</html>

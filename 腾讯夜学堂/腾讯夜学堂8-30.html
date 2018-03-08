@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  background:url(images/bg.jpg);
+}
+#course{
+  width:986px;
+  height:620px;
+  margin:0px auto;
+}
+.cous_con{
+  width:986px;
+  height:495px;
+  background:#cd5412;
+  padding-top:30px;/*加  大盒子里面才有效果*/
+}
+.content{
+  width:951px;
+  height:435px;
+  background:#fff;
+  margin:auto;
+  padding-top:25px;
+  padding-left:25px;
+}
+.con{
+  width:297px;
+  height:198px;
+  position:relative;
+  float:left;
+  margin-right:15px;
+  margin-bottom:15px;
+  overflow:hidden;
+}
+.txt{
+  width:297px;
+  height:45px;
+  color:#fff;
+  background:rgba(0,0,0,0.6);
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  opacity:06;
+  font-family:"微软雅黑";
+}
+.txt h3{
+  text-align:center;
+  font-size:20px;
+  font-weight:100;
+  line-height:45px;
+}
+.txt p{
+  text-align:center;
+  font-size:14px;
+}
+</style>
+<body>
+  <div id="course">
+   <img src="images/course.jpg"/>
+    <div class="cous_con">
+     <div class="content">
+      <div class="con">
+        <img src="images/class1.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+      <div class="con">
+        <img src="images/class2.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+      <div class="con">
+        <img src="images/class3.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+      <div class="con">
+        <img src="images/class4.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+      <div class="con">
+        <img src="images/class5.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+      <div class="con">
+        <img src="images/class6.jpg"/> 
+           <div class="txt">
+             <h3>IT培训</h3>
+             <p>在线培训成大神的学习之路</p>
+           </div>
+        </div>
+     </div>
+    </div>
+  </div>
+</body>
+<script src="jquery-3.1.0.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+  
+$(".con").hover(function(){
+	$(this).children(".txt").stop().animate({height:"198px"},500);
+	$(this).find(".txt h3").animate({paddingTop:"60px"},500);//此处不能使用children  因为h3不是他子元素 是孙贝
+},function(){
+	$(this).children(".txt").stop().animate({height:"45px"},500);
+	$(this).find(".txt h3").animate({paddingTop:"0px"},500);//此处不能使用children  因为h3不是他子元素 是孙贝
+})
+
+</script>
+</html>

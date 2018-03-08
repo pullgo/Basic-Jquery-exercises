@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ } 
+#box{
+  width: 670px;
+  height: 630px;
+  margin:50px auto;
+}
+.con{
+  width: 670px;
+  height: 500px;
+  background: url("./images/0.jpg");
+}
+.con ul li{
+   width: 70px;
+   height: 50px;
+   background: #ddd;
+   text-align: center;
+   line-height: 50px;
+   opacity: 0.9;
+   margin-bottom:1px;
+   cursor: pointer;
+}
+.con ul li:hover{
+   color: #a05fd1;
+   width: 58px;
+   border-left: 6px solid #a05fd1;
+   padding-right:6px;
+}
+</style>
+<body>
+<div id="box">
+   <img src="./images/title.png"/>
+   <div class="con">
+      <ul>
+         <li>态度</li>
+         <li>最前沿</li>
+         <li>最话题</li>
+         <li>事件</li>
+         <li>推荐</li>
+         <li>尚惠</li>
+      </ul>
+   </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+  $("#box .con ul li").hover(function(){
+    var i=$(this).index();
+   $("#box .con").css("background",'url(./images/'+i+'.jpg)');
+  });
+ /*
+  总结：
+  1.background url需要加“”
+  2.字符串拼接问题 +i+ 前后才是需要拼接的内容
+   */   
+</script>
+</body>
+</html>

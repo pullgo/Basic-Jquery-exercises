@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    }
+body{background:url(../images/bg.jpg);
+}
+#box{
+    width:735px;
+    height:350px;
+    margin: 50px auto;
+    position: relative;
+}
+.pic ul{
+    width:735px;
+    height:350px;
+    overflow: hidden;
+}
+#box .prev{
+    width:45px;
+    height:100px;
+    background: url("../images/button.png");
+    position: absolute;
+    left: 0;
+    top:125px;
+    opacity: 0.5;
+    display: none;
+    cursor: pointer;
+}
+#box .next{
+    width:45px;
+    height:100px;
+    background: url("../images/button.png");
+    background-position:-55px 0px;
+    position: absolute;
+    right: 0;
+    top:125px;
+    opacity: 0.5;
+    display: none;
+    cursor: pointer;
+}
+#box .nav{
+    width:720px;
+    height:30px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+#box .nav ul li{
+    width:119px;
+    height:30px;
+    background:rgba(255,255,255,0.6);
+    color: #333;
+    font-size: 12px;
+    margin-left: 1px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}    
+
+#box .nav ul .bg{
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+  }
+	  
+	  
+	  

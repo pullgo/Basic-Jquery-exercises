@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Document</title>
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;
+}
+#OPPO{
+	width:100%;
+	height:630px;
+}
+.pic{width:100%;
+	height:630px;
+	overflow:hidden;
+}
+.pic ul li{
+	list-style-type:none;
+	width:100%;
+	height:630px;
+	position:relative;
+}
+.pic ul li img{
+	position:absolute;
+	left: -1180px;
+	top: 0px;
+}			
+.nav{
+	width:100%;
+	height:70px;
+	background:#fff;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	opacity:0.75;
+}
+.bar{
+	width:1180px;
+	height:3px;
+	background:url("images/bar.png");
+	position:absolute;
+	left:50%;
+	margin-left:-590px;
+	bottom:0px;
+}
+.bar p{
+	width:0px;
+	height:3px;
+	background:#00925f;
+}
+</style>
+</head>
+<body>
+	<div id="OPPO">
+		<div class="pic">
+			<ul>
+				<li style="background:url(images/bg1.jpg) center">
+					<img src="images/con1.png"/>
+					<div class="nav"></div>
+					<div class="bar"><p></p></div>
+				</li>
+				<li style="background:url(images/bg2.jpg) center">
+					<img src="images/con2.png" />
+					<div class="nav"></div>
+					<div class="bar"><p></p></div>
+				</li>
+				<li style="background:url(images/bg3.jpg) center">
+					<img src="images/con3.png" />
+					<div class="nav"></div>
+					<div class="bar"><p></p></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+var i=0;
+junmper();
+function junmper(){
+	$(".pic ul li").eq(i).find("p").css("width","0px");
+	$(".pic ul li").eq(i).find("img").css("left","-1180px");
+	$(".pic ul li").eq(i).find("img").animate({left:"50px"},500,function(){
+		$(".pic ul li").eq(i).find("p").animate({width:"1177px"},2000,function(){
+			$(".pic ul li").eq(i).find("img").animate({left:"1180px"},500,function(){
+				i++;
+				if(i>2){i=0};
+				$(".pic ul li").eq(i).fadeIn(100).siblings().fadeOut(100);
+			});
+		});
+	});
+}
+	setInterval("junmper()",3200);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			list-style: none;
+		}
+		body{
+			background: #000;
+		}
+		#djs{
+			width: 600px;
+			height: 430px;
+			margin: 150px auto;
+		}
+		p{
+			color: #fff;
+			font-size: 20px;
+			margin-bottom: 6px;
+		}
+		.con{
+			width: 565px;
+			height: 320px;
+			background: url("./images/bg.gif");
+			padding-top: 80px;
+			padding-left: 35px;
+			}
+		.pic{
+			width: 490px;
+			height: 160px;
+			border: 1px solid #000;
+			background: #000;
+			box-shadow: 0px 0px 10px #000;
+			padding-top: 40px;
+			padding-left: 40px;
+		}
+		.pic ul li{
+			width: 65px;
+			height: 120px;
+			float: left;
+			overflow: hidden;
+		}
+        .pic ul .time{
+ 			width: 25px;
+			height: 120px;
+       	    color: #fff;
+       	    text-align: center;
+       	    line-height: 120px;
+       	    font-weight: bold;
+        }
+        .pic ul li ul{
+        	position: relative;//需要定位才可以移动
+        }
+	</style>
+ </head>
+ <body>
+ <div id="djs">
+    <p>距离倒计时还有：</p>
+    <div class="con">
+      <div class="pic">
+         <ul>
+             <li>             
+                <ul>
+	                 <li><img src="./images/2.png"></li>
+	                 <li><img src="./images/1.png"></li>
+	                 <li><img src="./images/0.png"></li>
+	                 <li><img src="./images/2.png"></li>
+                </ul>
+             </li>   
+             <li>
+                 <ul>
+	                 <li><img src="./images/3.png"></li>
+	                 <li><img src="./images/2.png"></li>
+	                 <li><img src="./images/1.png"></li>
+	                 <li><img src="./images/0.png"></li>
+ 	                 <li><img src="./images/3.png"></li>
+                </ul>
+             </li> 
+           <li class="time">时</li> 
+              <li>
+                  <ul>
+	                 <li><img src="./images/5.png"></li>
+	                 <li><img src="./images/4.png"></li>
+	                 <li><img src="./images/3.png"></li>
+	                 <li><img src="./images/2.png"></li>
+	                 <li><img src="./images/1.png"></li>
+	                 <li><img src="./images/0.png"></li>
+	                 <li><img src="./images/5.png"></li>
+                 </ul>
+              </li>   
+           <li>
+               <ul>
+	                <li><img src="./images/9.png"></li>
+	                <li><img src="./images/8.png"></li>
+	                <li><img src="./images/7.png"></li>
+	                <li><img src="./images/6.png"></li>
+	                <li><img src="./images/5.png"></li>
+	                <li><img src="./images/4.png"></li>
+	                <li><img src="./images/3.png"></li>
+	                <li><img src="./images/2.png"></li>
+	                <li><img src="./images/1.png"></li>
+	                <li><img src="./images/0.png"></li>
+	                <li><img src="./images/9.png"></li>
+               </ul>
+          </li>   
+           <li class="time">分</li> 
+            <li>
+	            <ul>
+	                <li><img src="./images/5.png"></li>
+	                <li><img src="./images/4.png"></li>
+	                <li><img src="./images/3.png"></li>
+	                <li><img src="./images/2.png"></li>
+	                <li><img src="./images/1.png"></li>
+	                <li><img src="./images/0.png"></li>
+	                <li><img src="./images/5.png"></li>
+	            </ul>
+             </li>   
+            <li>
+                <ul>
+	               <li><img src="./images/9.png"></li>
+	               <li><img src="./images/8.png"></li>
+	               <li><img src="./images/7.png"></li>
+	               <li><img src="./images/6.png"></li>
+	               <li><img src="./images/5.png"></li>
+	               <li><img src="./images/4.png"></li>
+	               <li><img src="./images/3.png"></li>
+	               <li><img src="./images/2.png"></li>
+	               <li><img src="./images/1.png"></li>
+	               <li><img src="./images/0.png"></li>
+	               <li><img src="./images/9.png"></li>
+                </ul>
+             </li>   
+           <li class="time">秒</li> 
+         </ul>
+      </div>   
+    </div>
+ </div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" >
+		var a = 0;
+		var s = 0;
+		var b = 0;
+		var c = 0;
+		var d = 0;
+		var e = 0;
+		var f = 0;
+
+		function junmper1(){
+			a++;
+			s = a*-120;
+			if(a<11){
+			$(".pic ul li ul").eq(5).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(5).css("top","0px");
+			$(".pic ul li ul").eq(5).animate({"top":"-120px"},500);
+            a=1;
+		}
+        }
+        function junmper2(){
+			b++;
+			s = b*-120;
+			if(b<7){
+			$(".pic ul li ul").eq(4).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(4).css("top","0px");
+			$(".pic ul li ul").eq(4).animate({"top":"-120px"},500);
+            b=1;
+		}
+
+        }
+         function junmper3(){
+			c++;
+			s = c*-120;
+			if(c<11){
+			$(".pic ul li ul").eq(3).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(3).css("top","0px");
+			$(".pic ul li ul").eq(3).animate({"top":"-120px"},500);
+            c=1;
+		}
+
+        }
+         function junmper4(){
+			d++;
+			s = d*-120;
+			if(d<7){
+			$(".pic ul li ul").eq(2).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(2).css("top","0px");
+			$(".pic ul li ul").eq(2).animate({"top":"-120px"},500);
+            d=1;
+		}
+
+        }
+         function junmper5(){
+			e++;
+			s = e*-120;
+			if(e<5){
+			$(".pic ul li ul").eq(1).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(1).css("top","0px");
+			$(".pic ul li ul").eq(1).animate({"top":"-120px"},500);
+            e=1;
+		}
+
+        }
+         function junmper6(){
+			f++;
+			s = f*-120;
+			if(f<4){
+			$(".pic ul li ul").eq(0).animate({top:s},500);
+		}else{
+
+			$(".pic ul li ul").eq(0).css("top","0px");
+			$(".pic ul li ul").eq(0).animate({"top":"-120px"},500);
+            f=1;
+		}
+
+        }
+       
+            setInterval("junmper1()",1000);
+            setInterval("junmper2()",10000);
+            setInterval("junmper3()",60000);
+            setInterval("junmper4()",600000);
+            setInterval("junmper5()",3600000);
+            setInterval("junmper6()",86400000);
+		/*总结：
+         1.定位移动
+         2.距离等于Li高度*a
+         3.做到无缝滚动需要另外复制一个数字
+		*/
+		</script>
+ </body>
+</html>

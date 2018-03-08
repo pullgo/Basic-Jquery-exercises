@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ } 
+#box{
+  width: 1000px;
+  height:550px;
+  margin:50px auto;
+}
+#box .tltle{
+  width:1000px;
+  height: 57px; 
+  text-align: center;
+  line-height:57px;
+  border-top: 4px solid #e5e5e5; 
+}
+#box .tltle p{
+  display: inline-block;
+  border-top: 4px solid #ccc; 
+  margin: -4px auto;
+  color: #000;
+  font-weight: bold;
+  font-size: 38px;
+}
+#box .pic{
+  float: left;
+  position: relative;
+  overflow: hidden;
+
+}
+
+#box .pic img{
+  width: 390px;
+  height:520px;
+}
+#box .pic .pic_con{
+  width: 360px;
+  height:115px;
+  position: absolute;
+  bottom: -200px;
+  left: 15px;
+  background: #fff;
+}
+#box ul li{
+  width: 200px;
+  height: 260px;
+  float: right;
+  margin-left: 2px;
+  position: relative;
+}
+#box ul li img{
+  width: 200px;
+  height: 260px;
+}
+.li_con{
+  width: 200px;
+  height: 260px; 
+  background: #fff;
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+</style>
+<body>
+<div id="box">
+  <div class="tltle">
+    <p>明星介绍START</p>
+  </div>
+  <div>
+    <div class="pic">
+      <img src="./images/1.jpg"/>
+      <div class="pic_con">
+        <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+      </div>
+    </div>
+    <ul>
+      <li><img src="./images/2.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+      <li><img src="./images/3.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+      <li><img src="./images/4.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+      <li><img src="./images/5.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+      <li><img src="./images/6.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+      <li><img src="./images/7.jpg"/>
+        <div class="li_con">
+          <p>林心如，1976年1月27日出生于台湾台北，中国台湾女演员、影视制作人。1993年以兼职广告模特开始了演艺生涯；1994年因与郭富城合拍广告踏入演艺圈</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+  $("#box .pic").hover(function(){
+    $("#box .pic_con").animate({bottom:"30px"},300);
+  },function(){
+    $("#box .pic_con").animate({bottom:"-200px"},300);
+  })
+
+  $("#box ul li").hover(function(){
+    $(this).find(".li_con").css("display","block");
+  },function(){
+    $(this).find(".li_con").css("display","none");
+  })
+
+  /*
+  总结：
+  1.background url需要加“”
+  2.字符串拼接问题 +i+ 前后才是需要拼接的内容
+   */
+  
+    
+   </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{
+  margin:0px;
+  padding:0px;
+  list-style:none;
+}
+.menu{
+  width:210px;
+  margin-left:5px;
+  background:#282828;
+}
+.logo{
+  width:210px;
+  height:52px;
+  background:url(images/logo.png) no-repeat center;
+}
+.menu ul{
+  border-bottom:1px solid #424242;
+}
+.menu ul li{
+  color:#FFF;
+  border-top:1px solid #424242;
+  width:210px;
+  line-height:50px;
+  font-size:14px;
+}
+.menu ul li img{
+  margin-left:10px;
+  margin-right:5px;
+}
+.menu ul li .con{
+  width:210px;
+  height:200px;
+  display:none;
+}
+.menu ul li .con img{
+  margin-left:0px;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+  <div class="logo"></div>
+    <ul>
+      <li>
+        <img src="images/1.png" align="absmiddle"/>网页制作
+        <div class="con">
+          <img src="images/con1.png"/>
+        </div>
+      </li>
+      <li>
+        <img src="images/2.png" align="absmiddle"/>Java课程
+        <div class="con">
+          <img src="images/con2.png"/>
+        </div>
+      </li>
+      <li>
+        <img src="images/3.png" align="absmiddle"/>C++课程
+        <div class="con">
+          <img src="images/con3.png"/>
+        </div>
+      </li>
+      <li>
+        <img src="images/4.png" align="absmiddle"/>Seo课程
+        <div class="con">
+          <img src="images/con4.png"/>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="file:///E|/代码/jquery-3.1.0.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(".menu ul li").click(function(){
+  $(this).find(".con").slideToggle("slow");
+  $(this).siblings().find(".con").slideUp("slow");
+})
+//总结：需要图片和li水平居中 行内加样式 align="absmiddle" 动画 slideToggle slideUp  margin-left /right border-top 
+
+</script>
+</html>

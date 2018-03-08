@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	  padding:0;
+	  margin:0;
+	  list-style:none;
+	  }
+.box{
+	width:310px;
+	height:400px;
+	margin:100px auto;
+	border:4px solid #ddd;
+	box-shadow:0px 0px 20px #000000;
+	position:relative;
+	}	  
+	  
+.sd{
+	width:292px;
+	height:105px;
+	margin:auto;
+	
+	}	  
+.sd ul li{
+	width:69px;
+	height:75px;
+	float:left;
+	text-align:center;
+	padding-top:27px;
+	background:url(../images/navpic1.png);
+	font-size:14px;
+	color:#333;
+	margin-right:4px;
+	position:relative;/* 一定要定位 z-index才有效果*/
+	/*z-index:1;*/
+	}	  
+.con{
+	box-shadow:0px 0px 10px #666;
+	width:218px;
+	height:258px;
+	position:absolute;
+	top:100px;
+	left:43px;
+	}	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
